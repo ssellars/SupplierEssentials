@@ -11,39 +11,13 @@ import UIKit
 
 class EventListTableViewController: UITableViewController {
 
-   struct Event {
-        var title: String
-        var venue: String
-        var showsRemaining: Int
-        var dateRange: String
-        var revenue: Float
-        var ticketsRemaining: Int
-        var eventImage: UIImage
-    }
     
-    var events = [Event(title: "Wicked", venue: "Pantages", showsRemaining: 12, dateRange: "Aug 8- 30", revenue: 3900, ticketsRemaining: 89, eventImage: #imageLiteral(resourceName: "Amelie")), Event(title: "Amelie", venue: "Ahmanson", showsRemaining: 31, dateRange: "Aug 20 - Sept 15", revenue: 4750, ticketsRemaining: 101, eventImage: #imageLiteral(resourceName: "Amelie")), Event(title: "Riverdance", venue: "My House", showsRemaining: 1, dateRange: "Aug 1", revenue: 11.00, ticketsRemaining: 3, eventImage: #imageLiteral(resourceName: "Amelie"))]
+    var events = [Event]()
     
-    var jsonPayload = [String: [Event]]()
-   // var event = Event(title: "Wicked", venue: "Pantages", showsRemaining: 12, dateRange: "Aug 8- 30", revenue: 3900, ticketsRemaining: 89)
-    
-  // let event1 = Event(title: "Amelie", venue: "Pantages", showsRemaining: 8, dateRange: "Mar 8 - 30", revenue: 3500, ticketsRemaining: 201)
-  //  let imageTest:UIImage = #imageLiteral(resourceName: "Amelie")
-    
-    let event2 = Event(title: "Amelie", venue: "Pantages", showsRemaining: 12, dateRange: "Aug 20 - 15", revenue: 3900, ticketsRemaining: 89, eventImage: #imageLiteral(resourceName: "Amelie"))
-    
-
     override func viewDidLoad() {
-               super.viewDidLoad()
-        
-       self.navigationItem.title = "Event Listings"
-    
-    //    jsonPayload["events"] = events
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        super.viewDidLoad()
+        self.navigationItem.title = "Event Listings"
+        self.events = ApiService().getData()
     }
 
     override func didReceiveMemoryWarning() {

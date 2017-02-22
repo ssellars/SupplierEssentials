@@ -13,6 +13,8 @@
 		CD747BFD1E16F02800B6A143 /* menuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD747BFC1E16F02800B6A143 /* menuViewController.swift */; };
 		CD747BFF1E16F11C00B6A143 /* notificationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD747BFE1E16F11C00B6A143 /* notificationsTableViewController.swift */; };
 		CD747C011E16F1CE00B6A143 /* settingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD747C001E16F1CE00B6A143 /* settingsViewController.swift */; };
+		CDB1E5F71E551B5600F07AB8 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB1E5F61E551B5600F07AB8 /* ApiService.swift */; };
+		CDB1E5F91E5522A800F07AB8 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB1E5F81E5522A800F07AB8 /* Event.swift */; };
 		CDCEA4CC1DD0E896006AD43A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCEA4CB1DD0E896006AD43A /* AppDelegate.swift */; };
 		CDCEA4CE1DD0E896006AD43A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCEA4CD1DD0E896006AD43A /* ViewController.swift */; };
 		CDCEA4D11DD0E896006AD43A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDCEA4CF1DD0E896006AD43A /* Main.storyboard */; };
@@ -28,6 +30,8 @@
 		CD747BFC1E16F02800B6A143 /* menuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuViewController.swift; sourceTree = "<group>"; };
 		CD747BFE1E16F11C00B6A143 /* notificationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = notificationsTableViewController.swift; sourceTree = "<group>"; };
 		CD747C001E16F1CE00B6A143 /* settingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = settingsViewController.swift; sourceTree = "<group>"; };
+		CDB1E5F61E551B5600F07AB8 /* ApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		CDB1E5F81E5522A800F07AB8 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		CDCEA4C81DD0E896006AD43A /* Supplier Essentials.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Supplier Essentials.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDCEA4CB1DD0E896006AD43A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDCEA4CD1DD0E896006AD43A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,8 +75,10 @@
 				CDCEA4CB1DD0E896006AD43A /* AppDelegate.swift */,
 				CDCEA4CD1DD0E896006AD43A /* ViewController.swift */,
 				CDCEA4CF1DD0E896006AD43A /* Main.storyboard */,
+				CDB1E5F61E551B5600F07AB8 /* ApiService.swift */,
 				CD23B8BD1E1C7F9500AB0E5D /* EventTableViewCell.swift */,
 				CD11B5581DEF4B9300B94862 /* EventListTableViewController.swift */,
+				CDB1E5F81E5522A800F07AB8 /* Event.swift */,
 				CD747C001E16F1CE00B6A143 /* settingsViewController.swift */,
 				CD747BFC1E16F02800B6A143 /* menuViewController.swift */,
 				CD747BFA1E16EF8C00B6A143 /* eventDetailViewController.swift */,
@@ -159,10 +165,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD23B8BE1E1C7F9500AB0E5D /* EventTableViewCell.swift in Sources */,
+				CDB1E5F91E5522A800F07AB8 /* Event.swift in Sources */,
 				CDCEA4DE1DD0E987006AD43A /* LoginViewController.swift in Sources */,
 				CDCEA4CE1DD0E896006AD43A /* ViewController.swift in Sources */,
 				CD11B5591DEF4B9300B94862 /* EventListTableViewController.swift in Sources */,
 				CD747BFF1E16F11C00B6A143 /* notificationsTableViewController.swift in Sources */,
+				CDB1E5F71E551B5600F07AB8 /* ApiService.swift in Sources */,
 				CD747BFD1E16F02800B6A143 /* menuViewController.swift in Sources */,
 				CDCEA4CC1DD0E896006AD43A /* AppDelegate.swift in Sources */,
 				CD747BFB1E16EF8C00B6A143 /* eventDetailViewController.swift in Sources */,

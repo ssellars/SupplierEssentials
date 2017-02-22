@@ -53,11 +53,19 @@
                                 <state key="normal" title="Login"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C5m-ER-clv">
-                                <rect key="frame" x="154" y="607" width="46" height="30"/>
+                                <rect key="frame" x="49" y="609" width="62" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="event list"/>
                                 <connections>
                                     <segue destination="O9R-fN-sDK" kind="show" id="88Q-hB-eY1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQA-Ao-IC0">
+                                <rect key="frame" x="189" y="608" width="80" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="event detail"/>
+                                <connections>
+                                    <segue destination="cuE-4x-o3V" kind="show" id="WJd-LN-cNX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -199,7 +207,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9DJ-WY-R7a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1616" y="-75"/>
+            <point key="canvasLocation" x="1616" y="167"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="ouD-D3-NyJ">
@@ -217,7 +225,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9wE-fe-0vu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2475" y="951"/>
+            <point key="canvasLocation" x="2388" y="827"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="cAi-6f-KjT">
@@ -259,7 +267,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="frA-YV-5Wl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2397.5999999999999" y="-528.48575712143929"/>
+            <point key="canvasLocation" x="2387" y="167"/>
         </scene>
         <!--Notification-->
         <scene sceneID="lfX-so-KIW">
@@ -288,7 +296,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ipK-sI-7Al" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="825" y="827"/>
+            <point key="canvasLocation" x="543" y="1006"/>
         </scene>
         <!--Event Detail View Controller-->
         <scene sceneID="CRz-k0-JYm">
@@ -357,19 +365,20 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HfD-fE-9xm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1502.8985507246377" y="1567.663043478261"/>
+            <point key="canvasLocation" x="1616" y="827"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="949-rg-ysN">
             <objects>
                 <navigationController id="xvq-jd-Ni0" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gao-s4-cyE">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="gao-s4-cyE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VLa-Pl-0Ph" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="157" y="167"/>
         </scene>
     </scenes>
     <resources>
