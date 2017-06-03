@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E886D2C1EE2B29800A790ED /* NotificationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E886D2B1EE2B29800A790ED /* NotificationDetailViewController.swift */; };
+		7E886D2E1EE2B56F00A790ED /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E886D2D1EE2B56F00A790ED /* NotificationTableViewCell.swift */; };
+		7E886D301EE2C66400A790ED /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E886D2F1EE2C66400A790ED /* SwiftyJSON.swift */; };
 		CD11B5591DEF4B9300B94862 /* EventListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD11B5581DEF4B9300B94862 /* EventListTableViewController.swift */; };
 		CD23B8BE1E1C7F9500AB0E5D /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD23B8BD1E1C7F9500AB0E5D /* EventTableViewCell.swift */; };
 		CD747BFB1E16EF8C00B6A143 /* eventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD747BFA1E16EF8C00B6A143 /* eventDetailViewController.swift */; };
@@ -16,7 +19,6 @@
 		CDB1E5F71E551B5600F07AB8 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB1E5F61E551B5600F07AB8 /* ApiService.swift */; };
 		CDB1E5F91E5522A800F07AB8 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB1E5F81E5522A800F07AB8 /* Event.swift */; };
 		CDCEA4CC1DD0E896006AD43A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCEA4CB1DD0E896006AD43A /* AppDelegate.swift */; };
-		CDCEA4CE1DD0E896006AD43A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCEA4CD1DD0E896006AD43A /* ViewController.swift */; };
 		CDCEA4D11DD0E896006AD43A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDCEA4CF1DD0E896006AD43A /* Main.storyboard */; };
 		CDCEA4D31DD0E896006AD43A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDCEA4D21DD0E896006AD43A /* Assets.xcassets */; };
 		CDCEA4D61DD0E896006AD43A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDCEA4D41DD0E896006AD43A /* LaunchScreen.storyboard */; };
@@ -24,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7E886D2B1EE2B29800A790ED /* NotificationDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationDetailViewController.swift; sourceTree = "<group>"; };
+		7E886D2D1EE2B56F00A790ED /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
+		7E886D2F1EE2C66400A790ED /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		CD11B5581DEF4B9300B94862 /* EventListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventListTableViewController.swift; sourceTree = "<group>"; };
 		CD23B8BD1E1C7F9500AB0E5D /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		CD747BFA1E16EF8C00B6A143 /* eventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = eventDetailViewController.swift; sourceTree = "<group>"; };
@@ -34,7 +39,6 @@
 		CDB1E5F81E5522A800F07AB8 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		CDCEA4C81DD0E896006AD43A /* Supplier Essentials.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Supplier Essentials.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDCEA4CB1DD0E896006AD43A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CDCEA4CD1DD0E896006AD43A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CDCEA4D01DD0E896006AD43A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CDCEA4D21DD0E896006AD43A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDCEA4D51DD0E896006AD43A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -73,13 +77,15 @@
 			isa = PBXGroup;
 			children = (
 				CDCEA4CB1DD0E896006AD43A /* AppDelegate.swift */,
-				CDCEA4CD1DD0E896006AD43A /* ViewController.swift */,
 				CDCEA4CF1DD0E896006AD43A /* Main.storyboard */,
 				CDB1E5F61E551B5600F07AB8 /* ApiService.swift */,
 				CD23B8BD1E1C7F9500AB0E5D /* EventTableViewCell.swift */,
 				CD11B5581DEF4B9300B94862 /* EventListTableViewController.swift */,
 				CDB1E5F81E5522A800F07AB8 /* Event.swift */,
+				7E886D2D1EE2B56F00A790ED /* NotificationTableViewCell.swift */,
 				CD747C001E16F1CE00B6A143 /* settingsViewController.swift */,
+				7E886D2F1EE2C66400A790ED /* SwiftyJSON.swift */,
+				7E886D2B1EE2B29800A790ED /* NotificationDetailViewController.swift */,
 				CD747BFC1E16F02800B6A143 /* menuViewController.swift */,
 				CD747BFA1E16EF8C00B6A143 /* eventDetailViewController.swift */,
 				CD747BFE1E16F11C00B6A143 /* notificationsTableViewController.swift */,
@@ -129,7 +135,7 @@
 				};
 			};
 			buildConfigurationList = CDCEA4C31DD0E896006AD43A /* Build configuration list for PBXProject "Supplier Essentials" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -164,16 +170,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E886D2E1EE2B56F00A790ED /* NotificationTableViewCell.swift in Sources */,
 				CD23B8BE1E1C7F9500AB0E5D /* EventTableViewCell.swift in Sources */,
 				CDB1E5F91E5522A800F07AB8 /* Event.swift in Sources */,
 				CDCEA4DE1DD0E987006AD43A /* LoginViewController.swift in Sources */,
-				CDCEA4CE1DD0E896006AD43A /* ViewController.swift in Sources */,
+				7E886D2C1EE2B29800A790ED /* NotificationDetailViewController.swift in Sources */,
 				CD11B5591DEF4B9300B94862 /* EventListTableViewController.swift in Sources */,
 				CD747BFF1E16F11C00B6A143 /* notificationsTableViewController.swift in Sources */,
 				CDB1E5F71E551B5600F07AB8 /* ApiService.swift in Sources */,
 				CD747BFD1E16F02800B6A143 /* menuViewController.swift in Sources */,
 				CDCEA4CC1DD0E896006AD43A /* AppDelegate.swift in Sources */,
 				CD747BFB1E16EF8C00B6A143 /* eventDetailViewController.swift in Sources */,
+				7E886D301EE2C66400A790ED /* SwiftyJSON.swift in Sources */,
 				CD747C011E16F1CE00B6A143 /* settingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

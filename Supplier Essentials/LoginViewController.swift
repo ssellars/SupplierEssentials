@@ -12,34 +12,68 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBOutlet var userEmailTextField: UITextField!
-    
-    
-    @IBOutlet var userPasswordtextField: UITextField!
-    
-    
+    @IBOutlet var userPasswordTextField: UITextField!
     @IBOutlet weak var login: UIButton!
     
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        userEmailTextField.delegate = self
+        userPasswordTextField.delegate = self
     }
     
-
-    /*(323) 394-1339
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let loggedIn = userDefaults.bool(forKey: "loggedIn")
+        print("loggedIn: \(loggedIn)")
+        
+        if loggedIn {
+            performSegue(withIdentifier: "Login Segue", sender: nil)
+        }
     }
-    */
-
+    
+    
+    
+    @IBAction func loginAction(_ sender: Any) {
+        
+        let emailAddress = userEmailTextField.text ?? ""
+        let password = userPasswordTextField.text ?? ""
+        
+        if emailAddress == ""  ||  password == "" {
+            let alert = showSimpleAlert(title: "", message: "Please enter your email address and password to continue.")
+            present(alert, animated: true, completion: nil)
+            return
+        }
+        
+        let loginResponse:String = ApiService().login(emailAddress: emailAddress, password: password)
+        
+        if loginResponse == "Success" {
+            userDefaults.set(true, forKey: "loggedIn")
+            performSegue(withIdentifier: "Login Segue", sender: nil)
+        }
+        else {
+            let alert = showSimpleAlert(title: loginResponse, message: "")
+            present(alert, animated: true, completion: nil)
+            return
+        }
+    }
+    
+    
+    //
+    // Function : textFieldShouldReturn()
+    //
+    //
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+        }
+        else {
+            textField.resignFirstResponder()
+            loginAction(self)
+        }
+        return false
+    }
 }

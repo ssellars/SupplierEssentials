@@ -16,7 +16,6 @@ class EventListTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "Event Listings"
         self.events = ApiService().getData()
     }
 
@@ -38,16 +37,31 @@ class EventListTableViewController: UITableViewController {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "EventTableViewCell", for: indexPath)
             as! EventTableViewCell
         let event = events[indexPath.row]
+        print("\(event)")
         
+        cell.eventId = event.id
         cell.title.text = event.title
         cell.venue.text = event.venue
-        cell.showsCount.text = String(event.showsRemaining)
+        cell.showsCount.text = "\(event.showsRemaining ?? 0)"
         cell.dates.text = event.dateRange
-        cell.revenue.text = String(event.revenue)
-        cell.ticketsRemaining.text = String(event.ticketsRemaining)
+        cell.revenue.text = "\(event.revenue ?? 0)"
+        cell.ticketsRemaining.text = "\(event.ticketsRemaining ?? 0)"
         cell.eventImage.image = event.eventImage
         
        return cell
+    }
+    
+    
+    //
+    // Function :
+    //
+    //
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "EventDetails" {
+            let newView = segue.destination as! eventDetailViewController
+            let cell = sender as! EventTableViewCell
+            newView.eventId = cell.eventId
+        }
     }
 
     

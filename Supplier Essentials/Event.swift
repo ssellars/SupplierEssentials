@@ -11,6 +11,7 @@ import UIKit
 
 
 public struct Event {
+    var id: Int
     var title: String
     var venue: String
     var showsRemaining: Int
@@ -20,3 +21,16 @@ public struct Event {
     var eventImage: UIImage
 }
 
+public struct EventNotification {
+    var id: Int
+    var eventId: Int
+    var title: String
+    var description: String
+    var timestamp: Double
+}
+
+public struct User {
+    var id: Int
+    var emailAddress: String
+    var password: String
+}

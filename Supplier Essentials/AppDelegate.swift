@@ -8,11 +8,13 @@
 
 import UIKit
 
+let userDefaults = UserDefaults.standard
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -44,3 +46,41 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+
+//
+// Function : showSimpleAlert
+//
+//
+func showSimpleAlert(title: String, message: String) -> UIAlertController {
+    let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+    return alert
+}
+
+
+func getFuzzyTime(timestamp: Double) -> String {
+    let sentTime = Calendar.current.dateComponents([.day, .hour, .minute, .second], from: Date(timeIntervalSince1970: timestamp), to: Date())
+    let sentMins = sentTime.minute ?? 0
+    let sentHours = sentTime.hour ?? 0
+    let sentDays = sentTime.day ?? 0
+    
+    var fuzzyTime = ""
+    var noun = ""
+    if sentDays > 0 {
+        noun = "Days"
+        if sentDays == 1 { noun = "Day"}
+        fuzzyTime = "\(sentDays) \(noun) Ago"
+    }
+    else if sentHours > 0 {
+        noun = "Hours"
+        if sentHours == 1 { noun = "Hour"}
+        fuzzyTime = "\(sentHours) \(noun) Ago"
+    }
+    else if sentMins < 5 {
+        fuzzyTime = "Just Now"
+    }
+    else {
+        fuzzyTime = "\(sentMins) Minutes Ago"
+    }
+    return fuzzyTime ?? ""
+}
