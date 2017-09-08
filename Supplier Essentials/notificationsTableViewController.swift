@@ -22,22 +22,16 @@ class notificationsTableViewController: UITableViewController {
         
         notifications.sort(by: { $0.timestamp > $1.timestamp })
     }
-
-   
-
+ 
     override func numberOfSections(in tableView: UITableView) -> Int {
         
         return 1
     }
 
-    
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return notifications.count
     }
 
-    
-  
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Notification Cell", for: indexPath) as! NotificationTableViewCell
         let row = indexPath.row
@@ -48,12 +42,20 @@ class notificationsTableViewController: UITableViewController {
         cell.timestampLabel.text = fuzzyTime
         return cell
     }
-    
-    
-    //
-    // Function :
-    //
-    //
+	
+	override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+		if editingStyle == UITableViewCellEditingStyle.delete
+		{
+			notifications.remove(at: indexPath.row)
+			tableView.reloadData()
+			
+	}
+
+		
+	
+	}
+		
+		
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "Notification Details" {
             let destinationController = segue.destination as! NotificationDetailViewController

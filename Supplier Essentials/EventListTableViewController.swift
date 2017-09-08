@@ -42,10 +42,10 @@ class EventListTableViewController: UITableViewController {
         cell.eventId = event.id
         cell.title.text = event.title
         cell.venue.text = event.venue
-        cell.showsCount.text = "\(event.showsRemaining ?? 0)"
+        cell.showsCount.text = "\(event.showsRemaining)"
         cell.dates.text = event.dateRange
-        cell.revenue.text = "\(event.revenue ?? 0)"
-        cell.ticketsRemaining.text = "\(event.ticketsRemaining ?? 0)"
+        cell.revenue.text = "\(event.revenue)"
+        cell.ticketsRemaining.text = "\(event.ticketsRemaining)"
         cell.eventImage.image = event.eventImage
         
        return cell
@@ -77,7 +77,7 @@ class EventListTableViewController: UITableViewController {
      //   ApiService.getData(title)
     }
     
-        
+
         
         
         // Get the new view controller using segue.destinationViewController.eventDetailViewController

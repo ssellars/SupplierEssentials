@@ -82,5 +82,6 @@ func getFuzzyTime(timestamp: Double) -> String {
     else {
         fuzzyTime = "\(sentMins) Minutes Ago"
     }
-    return fuzzyTime ?? ""
+    return fuzzyTime
+	
 }
